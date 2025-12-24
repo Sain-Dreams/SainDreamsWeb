@@ -1,11 +1,11 @@
 {
     "mk-ultra": {
         "platforms": {
-            "windows": {
+            "Windows": {
                 "in_test": "1.2.0",
                 "release": "1.1.0"
             },
-            "linux": {
+            "Linux": {
                 "in_test": "none",
                 "release": "1.1.0"
             }
