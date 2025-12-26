@@ -2,33 +2,42 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sain Dreams</title>
         <link rel="stylesheet" href="home.css">
         <link rel="shortcut icon" href="assets/icons/sain_dreams_logo.svg" type="image/x-icon">
     </head>
     <body>
         <nav class="navbar">
-            <div class="logo"><img src="assets/icons/sain_dreams_logo.svg" alt="Sain Dreams Logo" width="12%"> <h2>Sain Dreams</h2></div>
+            <div class="logo"><a href=""><img src="assets/icons/sain_dreams_logo.svg" alt="Sain Dreams Logo"  width="12%" ><h2>Sain Dreams</h2></a></div>
             <ul class="nav-links">
                 <li class="links">
                     <details>
                         <summary>Games</summary>
-                        <div class="content">
-                            <li><button onclick="document.location='games/lavaris'">Lavaris</button></li>
-                            <li><button onclick="document.location='games/mk-ultra'">Mindwave</button></li>
-                            <li><button onclick="document.location='games/project-world'">Project World</button></li>
-                        </div>
+                        <ul class="content">
+                            <li><a href="games/lavaris/">Lavaris</a></li>
+                            <li><a href="games/mk-ultra/">Mindwave</a></li>
+                            <li><a href="games/project-world/">Project World</a></li>
+                        </ul>
                     </details>
                 </li>
                 <li class="links">
                     <details>
-                        <summary>Tools</summary>
-                        <div class="content">
-                            <li><button onclick="document.location='games/lavaris'">Lavaris</button></li>
-                            <li><button onclick="document.location='games/mk-ultra'">Mindwave</button></li>
-                            <li><button onclick="document.location='games/project-world'">Project World</button></li>
-                        </div>
+                       <summary>Tools</summary>
+                        <ul class="content">
+                            <li><a href="">DualSenseX Support</a></li>
+                            <li><a href="">Game Jolt API</a></li>
+                            <li><a href="">Game Level Tools</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li class="links">
+                    <details>
+                        <summary>Apps</summary>
+                        <ul class="content">
+                            <li><a href="">Game Hub</a></li>
+                            <li><a href="">MyPC</a></li>
+                        </ul>
                     </details>
                 </li>
                 <li class="links"><a href="#about"><summary>About</summary></a></li>

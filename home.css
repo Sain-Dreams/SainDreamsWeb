@@ -9,13 +9,15 @@
     justify-content: start;
     align-items: center;
 
-    background-color: black;
+    background-image: linear-gradient(135deg, black, rgb(100, 100, 100));
     padding: 0.5rem 2rem;
     color: white;
 
     position: sticky;
     top: 0;
     z-index: 1000;
+
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .logo {
@@ -25,14 +27,18 @@
     gap: 50px;
 }
 
+.logo a {
+    display: contents;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    gap: 25px;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
     gap: 100px;
-}
-
-.links {
-    align-items: center;
 }
 
 .links a {
@@ -45,13 +51,25 @@
     color: grey;
 }
 
+.links {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.links details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .links summary {
     list-style: none;
     cursor: pointer;
-    text-align: center;
-    background-color: black;
+    background-color: transparent;
     color: white;
     padding: 7px;
+    outline: 2px solid white;
     border-radius: 12px;
     font-weight: bold;
     user-select: none;
@@ -60,10 +78,19 @@
 
 .links summary:hover {
     background-color: white;
-    color: black
+    color: black;
 }
 
 .content {
+    position: absolute;
+    text-align: center;
+    min-width: 150px;
     padding: 15px;
-    background-color: red;
+    background-color: black;
+}
+
+.content a {
+    cursor: pointer;
+    background-color: white;
+    color: black;
 }
