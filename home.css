@@ -9,7 +9,7 @@
 
 .navbar {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
 
     background-image: linear-gradient(135deg, rgb(20, 20, 20), rgb(105, 105, 105));
@@ -93,6 +93,20 @@
     color: black;
 }
 
+.links summary:hover img {
+    filter: brightness(0.0);
+}
+
+.links details[open] summary {
+    background-color: white;
+    color: black;
+}
+
+.links details[open] summary img {
+    filter: brightness(0.0);
+}
+
+
 .content {
     position: absolute;
     text-align: center;
@@ -117,7 +131,9 @@
 .content a {
     cursor: pointer;
     display: block;
+    position: relative;
     padding: 7px;
+    z-index: 1;
 
     font-weight: bold;
 
@@ -125,7 +141,25 @@
     color: white;
 }
 
-.content a:hover {
+.content a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: white;
+
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.content a:hover {
     color: black;
+}
+
+.content a:hover::before {
+    transform: scale(1);
 }
