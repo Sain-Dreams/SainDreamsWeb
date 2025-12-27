@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    font-family: sans-serif;
+    text-transform: uppercase;
 }
 
 .navbar {
@@ -9,7 +12,7 @@
     justify-content: start;
     align-items: center;
 
-    background-image: linear-gradient(135deg, black, rgb(100, 100, 100));
+    background-image: linear-gradient(135deg, rgb(20, 20, 20), rgb(105, 105, 105));
     padding: 0.5rem 2rem;
     color: white;
 
@@ -60,19 +63,28 @@
 .links details {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .links summary {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    padding: 7px 20px;
+    border-radius: 12px;
+    gap: 10px;
+
     list-style: none;
     cursor: pointer;
-    background-color: transparent;
-    color: white;
-    padding: 7px;
-    outline: 2px solid white;
-    border-radius: 12px;
+
     font-weight: bold;
     user-select: none;
+
+    outline: 2px solid white;
+    background-color: transparent;
+    color: white;
+
     transition: background-color 0.3s ease;
 }
 
@@ -84,13 +96,36 @@
 .content {
     position: absolute;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    top: 130%;
+    transform: translate(-50%);
+
     min-width: 150px;
-    padding: 15px;
-    background-color: black;
+    padding: 15px 0px;
+    gap: 10px;
+
+    list-style: none;
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 10px black;
+
+    background-image: linear-gradient(135deg, rgb(20, 20, 20), rgba(105, 105, 105, 0.5));
 }
 
 .content a {
     cursor: pointer;
+    display: block;
+    padding: 7px;
+
+    font-weight: bold;
+
+    background-color: transparent;
+    color: white;
+}
+
+.content a:hover {
     background-color: white;
     color: black;
 }
