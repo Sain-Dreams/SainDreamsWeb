@@ -11,4 +11,47 @@
 body {
     display: flex;
     flex-direction: column;
+
+    background-color: #0d0d0d;
+}
+
+body > .divider {
+    height: 1px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to right, transparent, #252525, transparent);
+    color: #666666;
+}
+
+footer > .social-media-bar {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    padding: 7.5px 15px;
+    gap: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+footer > .social-media-bar .sm-logo {
+    vertical-align: middle;
+}
+
+footer > .social-media-bar a {
+    background-color: transparent;
+    padding: 10px;
+    outline: 1px solid white;
+}
+
+footer > .social-media-bar .v-divider {
+    width: 1px;
+    height: 20px;
+    margin: auto 0;
+    background-color: white;
 }
