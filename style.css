@@ -11,6 +11,7 @@
 body {
     display: flex;
     flex-direction: column;
+    gap: 15px;
 
     background-color: #282830;
 }
@@ -22,78 +23,41 @@ body > .divider {
     background-color: white;
 }
 
-footer {
+.hero-logo {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    --bg-image: url(assets/images/mindwave/1.jpg);
+}
+.hero-logo::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
 
-    padding: 30px;
-    gap: 30px;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px) brightness(0.5);
+    
+    transition: background-image 1.3s ease-out;
 
-    background-image: linear-gradient(to right, transparent, #252525, transparent);
-    color: #666666;
+    z-index: -1;
 }
 
-footer > .logo {
-    width: 125px;
-    filter: brightness(0.8);
-}
-
-footer > .social-media-bar {
+#about {
     display: flex;
-    vertical-align: middle;
-    align-items: center;
+    margin: 0 auto;
 
-    border-radius: 15px;
-    padding: 15px 15px;
-    gap: 15px;
-
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    background-color: rgba(255, 255, 255, 0.05);
+    width: 90%;
+    gap: 20px;
 }
 
-footer > .social-media-bar a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 45px;
-    height: 45px;
-
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    background-color: transparent;
-
-    padding: 10px;
-    outline: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-
-    transition: background-color 0.3s ease;
-}
-
-footer > .social-media-bar a:hover {
+#about > .text {
     background-color: white;
-    outline: 2px solid white;
 }
 
-footer > .social-media-bar img{
-    filter: brightness(0.5);
-}
+#about > img {
+    width: 500px;
 
-footer > .social-media-bar a:hover img{
-    filter: brightness(0.0);
-}
-
-footer > .social-media-bar .v-divider {
-    width: 1px;
-    height: 20px;
-    margin: auto 0;
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-footer .copyright {
-    font-size: 0.8rem;
-    color: #444;
-    margin-top: 10px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
 }

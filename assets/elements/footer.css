@@ -1,0 +1,77 @@
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 30px;
+    gap: 30px;
+
+    background-image: linear-gradient(to right, transparent, #252525, transparent);
+    color: #666666;
+}
+
+footer > .logo {
+    width: 125px;
+    filter: brightness(0.8);
+}
+
+footer > .social-media-bar {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+
+    border-radius: 15px;
+    padding: 15px 15px;
+    gap: 15px;
+
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+footer > .social-media-bar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    background-color: transparent;
+
+    padding: 10px;
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+
+    transition: background-color 0.3s ease;
+}
+
+footer > .social-media-bar a:hover {
+    background-color: white;
+    outline: 2px solid white;
+}
+
+footer > .social-media-bar img{
+    filter: brightness(0.5);
+}
+
+footer > .social-media-bar a:hover img{
+    filter: brightness(0.0);
+}
+
+footer > .social-media-bar .v-divider {
+    width: 1px;
+    height: 20px;
+    margin: auto 0;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+footer .copyright {
+    font-size: 0.8rem;
+    color: #444;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
