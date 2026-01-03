@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     gap: 15px;
 
-    background-color: #282830;
+    background-color: #242424;
 }
 
 body > .divider {
@@ -49,15 +49,41 @@ body > .divider {
     display: flex;
     margin: 0 auto;
 
-    width: 90%;
     gap: 20px;
 }
 
 #about > .text {
-    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    height: 500px;
+
+    background-image: linear-gradient(90deg, rgb(35, 35, 35), transparent);
 }
 
-#about > img {
-    width: 500px;
+#about > .text::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
 
+    background-image: url(assets/images/about.jpg);
+    background-position: center;
+
+    filter: brightness(0.6) blur(5px);
+}
+
+#about > .text > div {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    font-size: 22px;
+
+    margin: 60px;
+    gap: 20px;
+    
+    color: white;
 }
