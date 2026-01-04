@@ -28,8 +28,10 @@ body > .divider {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     --bg-image: url(assets/images/mindwave/1.jpg);
 }
+
 .hero-logo::before {
     content: "";
     position: absolute;
@@ -48,8 +50,6 @@ body > .divider {
 #about {
     display: flex;
     margin: 0 auto;
-
-    gap: 20px;
 }
 
 #about > .text {
@@ -67,6 +67,7 @@ body > .divider {
 #about > .text::before {
     content: "";
     position: absolute;
+    margin: 10px;
     top: 0; left: 0; right: 0; bottom: 0;
     z-index: -1;
 
@@ -86,4 +87,38 @@ body > .divider {
     gap: 20px;
     
     color: white;
+}
+
+@media (max-width: 780px) {
+    .hero-logo {
+        height: 700px;
+    }
+
+    .hero-logo img {
+        width: 320px;
+    }
+
+    #about > .text {
+        height: 700px;
+    }
+
+    #about > .text::before {
+        background-position: 80%;
+    }
+
+    #about > .text > div {
+        width: 90%;
+        margin: 0 auto;
+        gap: 50px;
+    }
+
+    #about > .text h1 {
+        font-size: 55px;
+        text-align: center;
+    }
+
+    #about > .text p {
+        font-size: 21px;
+        text-align: center;
+    }
 }

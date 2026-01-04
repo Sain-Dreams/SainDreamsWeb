@@ -165,8 +165,15 @@
 
     #navbar .logo a {
         display: flex;
+        justify-items: center;
         width: 100%;
+        font-size: 12px;
     }
+
+    #navbar .logo img {
+        width: 55px;
+    }
+
     #navbar .nav-links {
         display: none;
     }
