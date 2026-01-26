@@ -66,6 +66,24 @@ footer > .social-media-bar .v-divider {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+footer .lang-bar {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-items: center;
+    gap: 5px;
+}
+
+footer .lang-bar > button {
+    background-color: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+footer .lang-bar > button:hover {
+    color: white;
+}
+
 footer .copyright {
     font-size: 0.8rem;
     color: #525252;
