@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Não indexar componentes isolados (evita que o Google mostre apenas a navbar no resultado da busca)
+Disallow: /assets/elements/
+
+# Apontar o caminho do Sitemap para o robô
+Sitemap: https://saindreams.com.br/sitemap.xml
