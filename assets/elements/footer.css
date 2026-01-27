@@ -82,6 +82,7 @@ footer .lang-bar > button {
 
 footer .lang-bar > button:hover {
     color: white;
+    cursor: pointer;
 }
 
 footer .copyright {
