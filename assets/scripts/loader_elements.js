@@ -1,21 +1,30 @@
 const langElement = {
     "en": {
-        "nav_games":"Games",
-        "nav_tools":"Tools",
-        "nav_about":"About",
-        "footer_rights":"All Rights Reserved."
+        "nav_games": "Games",
+        "nav_tools": "Tools",
+        "nav_about": "About",
+        "footer_rights": "All Rights Reserved.",
+        "link_home": "/", 
+        "link_about": "/#about",
+        "link_mindwave": "/games/mindwave"
     },
     "pt-br": {
-        "nav_games":"Jogos",
-        "nav_tools":"Ferramentas",
-        "nav_about":"Sobre",
-        "footer_rights":"Todos os Direitos Reservados."
+        "nav_games": "Jogos",
+        "nav_tools": "Ferramentas",
+        "nav_about": "Sobre",
+        "footer_rights": "Todos os Direitos Reservados.",
+        "link_home": "/pt-br/",
+        "link_about": "/pt-br/#about",
+        "link_mindwave": "/pt-br/games/mindwave"
     },
     "es": {
-        "nav_games":"Juegos",
-        "nav_tools":"Herramientas",
-        "nav_about":"Acerca&nbsp;de",
-        "footer_rights":"Todos los Derechos Reservados."
+        "nav_games": "Juegos",
+        "nav_tools": "Herramientas",
+        "nav_about": "Acerca&nbsp;de",
+        "footer_rights": "Todos los Derechos Reservados.",
+        "link_home": "/es/",
+        "link_about": "/es/#about",
+        "link_mindwave": "/es/games/mindwave"
     }
 }
 
