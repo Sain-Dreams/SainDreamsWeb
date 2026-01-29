@@ -4,27 +4,40 @@ const langElement = {
         "nav_tools": "Tools",
         "nav_about": "About",
         "footer_rights": "All Rights Reserved.",
-        "link_home": "/", 
-        "link_about": "/#about",
-        "link_mindwave": "/games/mindwave"
+
     },
     "pt-br": {
         "nav_games": "Jogos",
         "nav_tools": "Ferramentas",
         "nav_about": "Sobre",
         "footer_rights": "Todos os Direitos Reservados.",
-        "link_home": "/pt-br/",
-        "link_about": "/pt-br/#about",
-        "link_mindwave": "/pt-br/games/mindwave"
     },
     "es": {
         "nav_games": "Juegos",
         "nav_tools": "Herramientas",
         "nav_about": "Acerca&nbsp;de",
         "footer_rights": "Todos los Derechos Reservados.",
+    }
+}
+
+const langLinks = {
+    "en": {
+        "link_home": "/", 
+        "link_about": "/#about",
+        "link_mindwave": "/games/mindwave",
+        "link_lavaris": "/games/lavaris"
+    },
+    "pt-br": {
+        "link_home": "/pt-br/",
+        "link_about": "/pt-br/#about",
+        "link_mindwave": "/pt-br/games/mindwave",
+        "link_lavaris": "/pt-br/games/lavaris"
+    },
+    "es": {
         "link_home": "/es/",
         "link_about": "/es/#about",
-        "link_mindwave": "/es/games/mindwave"
+        "link_mindwave": "/es/games/mindwave",
+        "link_lavaris": "/es/games/lavaris"
     }
 }
 
@@ -40,7 +53,8 @@ function getCurrentLang() {
 function translateElement(element, lang) {
     return element.replace(/{{(.*?)}}/g, (match, key) => {
         const cleanKey = key.trim();
-        return (langElement[lang] && langElement[lang][cleanKey]) || cleanKey;
+        const element = (langElement[lang] && langElement[lang][cleanKey]) || cleanKey;
+        return (langLinks[lang] && langLinks[lang][cleanKey]) || element
     })
 }
 
