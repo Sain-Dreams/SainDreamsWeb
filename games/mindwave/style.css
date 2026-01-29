@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    background-color: #242424;
+}
+
+body > .divider {
+    height: 1px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.hero-logo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-logo::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+
+    background-image: url(/assets/images/mindwave/marketing/banner-background.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px) brightness(0.5);
+    z-index: -1;
+    height: 100%;
+}
+
+.hero-logo > img {
+    width: 90%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 780px) {
+    .hero-logo {
+        height: 700px;
+    }
+
+    .hero-logo img {
+        width: 320px;
+    }
+}
