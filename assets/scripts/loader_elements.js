@@ -58,6 +58,18 @@ function translateElement(element, lang) {
     })
 }
 
+function removeAfter(element, id) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(element, 'text/html')
+
+    const item = doc.getElementById(id)
+    if (item) {
+        item.remove()
+    }
+
+    return doc.body.innerHTML
+}
+
 function loadElement(containerId, elementPath) {
     const container = document.getElementById(containerId);
 
@@ -69,7 +81,7 @@ function loadElement(containerId, elementPath) {
             })
             .then(html => {
                 const elementLang = translateElement(html, getCurrentLang())
-                container.innerHTML = elementLang;
+                container.innerHTML = removeAfter(elementLang, "redirection");
                 console.log(`${elementPath} element loaded successfully`);
             })
             .catch(error => console.error(error))
