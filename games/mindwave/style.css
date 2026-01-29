@@ -29,6 +29,7 @@ body > .divider {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 550px;
 }
 
 .hero-logo::before {
