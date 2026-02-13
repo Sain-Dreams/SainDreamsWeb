@@ -3,11 +3,11 @@
         "platforms": {
             "Windows": {
                 "in_test": "1.2.0",
-                "release": "1.1.0"
+                "release": "1.2.0"
             },
             "Linux": {
                 "in_test": "none",
-                "release": "1.1.0"
+                "release": "1.2.0"
             }
         }
     }

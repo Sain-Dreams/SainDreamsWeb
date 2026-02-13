@@ -1,12 +1,11 @@
 const screenshots = [
     '/assets/images/mindwave/1.jpg',
-    '/assets/images/project-world/1.jpg',
     '/assets/images/lavaris/bg.png',
     '/assets/images/mindwave/2.jpg',
-    '/assets/images/project-world/3.jpg',
     '/assets/images/lavaris/bg.png',
     '/assets/images/mindwave/3.jpg',
-    '/assets/images/project-world/4.jpg',
+    '/assets/images/lavaris/bg.png',
+    '/assets/images/mindwave/4.jpg',
     '/assets/images/lavaris/bg.png'
 ];
 

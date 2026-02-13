@@ -1,0 +1,14 @@
+const photos = [
+    "/assets/images/mindwave/1.jpg",
+    "/assets/images/mindwave/2.jpg",
+    "/assets/images/mindwave/3.jpg",
+    "/assets/images/mindwave/4.jpg"
+]
+
+function change_main_photo(index) {
+    const main_img = document.querySelector(".main_photo")
+
+    if (main_img) {
+        main_img.src = photos[index]
+    }
+}
