@@ -33,7 +33,7 @@ section::before {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
 
-    background-image: url(/assets/images/mindwave/marketing/banner-background-dark.jpg);
+    background-image: url(/assets/images/mindwave/marketing/banner-background-dark.webp);
     background-size: cover;
     background-position: center;
     filter: blur(10px) brightness(0.4);
@@ -101,7 +101,6 @@ section::before {
     transition: background-color 0.3s ease;
 }
 
-
 .stores-bar > .btn-store:hover {
     background-color: white;
     outline: 2px solid white;
@@ -150,13 +149,32 @@ section::before {
     color: black;
 }
 
+.update {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 80px;
+    gap: 80px;
+}
+
+.update h1 {
+    color: white;
+    text-align: center;
+}
+
+.update iframe {
+    height: 478px;
+    width: 850px;
+}
+
 .media {
     display: flex;
     align-items: center;
     justify-content: center;
 
     gap: 50px;
-    padding: 50px;
+    padding: 80px;
 }
 
 .media > .gallery {

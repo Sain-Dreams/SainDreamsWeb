@@ -1,8 +1,8 @@
 const photos = [
-    "/assets/images/mindwave/1.jpg",
-    "/assets/images/mindwave/2.jpg",
-    "/assets/images/mindwave/3.jpg",
-    "/assets/images/mindwave/4.jpg"
+    "/assets/images/mindwave/1.webp",
+    "/assets/images/mindwave/2.webp",
+    "/assets/images/mindwave/3.webp",
+    "/assets/images/mindwave/4.webp"
 ]
 
 function change_main_photo(index) {

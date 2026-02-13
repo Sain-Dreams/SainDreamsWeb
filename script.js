@@ -1,12 +1,12 @@
 const screenshots = [
-    '/assets/images/mindwave/1.jpg',
-    '/assets/images/lavaris/bg.png',
-    '/assets/images/mindwave/2.jpg',
-    '/assets/images/lavaris/bg.png',
-    '/assets/images/mindwave/3.jpg',
-    '/assets/images/lavaris/bg.png',
-    '/assets/images/mindwave/4.jpg',
-    '/assets/images/lavaris/bg.png'
+    '/assets/images/mindwave/1.webp',
+    '/assets/images/lavaris/bg.webp',
+    '/assets/images/mindwave/2.webp',
+    '/assets/images/lavaris/bg.webp',
+    '/assets/images/mindwave/3.webp',
+    '/assets/images/lavaris/bg.webp',
+    '/assets/images/mindwave/4.webp',
+    '/assets/images/lavaris/bg.webp'
 ];
 
 let currentIndex = 0;
