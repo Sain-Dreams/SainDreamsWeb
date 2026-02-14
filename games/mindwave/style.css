@@ -23,6 +23,10 @@ body > .divider {
     background-color: white;
 }
 
+h1 {
+    font-size: 45px;
+}
+
 section {
     position: relative;
     width: 100%;
@@ -158,30 +162,75 @@ section::before {
     gap: 80px;
 }
 
-.update h1 {
+.update > h1 {
     color: white;
     text-align: center;
 }
 
-.update iframe {
+.update > iframe {
     height: 478px;
     width: 850px;
+
+    border-radius: 15px;
+
+    outline: solid 10px white;
+    box-shadow: 0px 0px 25px white;
 }
 
-.media {
+.update > a {
+    color: white;
+}
+
+.gallery {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
     gap: 50px;
     padding: 80px;
+
+    color: white;
 }
 
-.media > .gallery {
+.gallery > .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 35px;
+}
+
+.gallery > .main > .main_photo {
+    outline: solid 6px white;
+    box-shadow: 0px 0px 25px white;
+
+    border-radius: 10px;
+}
+
+.gallery > .main > .more_photos {
     display: flex;
     flex-direction: column;
 
-    gap: 20px;
+    gap: 25px;
+}
+
+.gallery > .main > .more_photos > a > img {
+    display: block;
+    line-height: 0;
+    max-width: 200px;
+    outline: solid 3px white;
+    box-shadow: 0px 0px 15px white;
+
+    border-radius: 5px;
+
+    transition: transform 0.3s ease, outline-color 0.3s ease, filter 0.3s ease;
+}
+
+.gallery > .main > .more_photos > a > img:hover {
+    transform: scale(1.10);
+    outline: solid 3px rgba(255, 255, 255, 0.25);
+    filter: brightness(0.5);
 }
 
 @media (max-width: 780px) {
