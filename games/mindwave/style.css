@@ -168,9 +168,6 @@ section::before {
 }
 
 .update > iframe {
-    height: 478px;
-    width: 850px;
-
     border-radius: 15px;
 
     outline: solid 10px white;
@@ -219,26 +216,136 @@ section::before {
     display: block;
     line-height: 0;
     max-width: 200px;
-    outline: solid 3px white;
+    outline: solid 3px rgba(255, 255, 255, 0.25);
     box-shadow: 0px 0px 15px white;
 
+    filter: brightness(0.5);
     border-radius: 5px;
 
     transition: transform 0.3s ease, outline-color 0.3s ease, filter 0.3s ease;
 }
 
+.gallery > .main > .more_photos > a > img.active,
 .gallery > .main > .more_photos > a > img:hover {
     transform: scale(1.10);
-    outline: solid 3px rgba(255, 255, 255, 0.25);
-    filter: brightness(0.5);
+    outline: solid 3px white;
+    filter: brightness(1.0);
+}
+
+.fiction {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to right, #353535, transparent, #353535);
+    padding: 15px 0px;
+}
+
+.fiction > p {
+    width: 80%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.75);
 }
 
 @media (max-width: 780px) {
-    .hero-logo {
-        height: 700px;
+    h1 {
+        font-size: 28px;
+        text-align: center;
     }
 
-    .hero-logo img {
-        width: 320px;
+    .hero-logo {
+        overflow: hidden;
+        min-height: 700px;
+        height: auto;
+
+        padding: 50px 0px;
+        gap: 50px;
+    }
+
+    .hero-logo > img {
+        width: 100%;
+        transform: scale(1.25);
+        object-fit: contain;
+    }
+    #stores > .title {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    #stores {
+        gap: 40px;
+    }
+
+    .stores-bar {
+        padding: 18px;
+    }
+
+    .stores-bar > .btn-store {
+        width: 75px;
+        height: 75px;
+
+        outline: 3px solid rgba(255, 255, 255, 0.5);
+    }
+
+
+    .description {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .description > div {
+        width: 100%;
+        padding: 25px;
+        font-size: 18px;
+        border-radius: 15px; 
+
+        text-align: center;
+    }
+
+    .update {
+        display: flex;
+        flex-direction: column;
+        min-height: 700px;
+        height: auto;
+        padding: 40px 15px;
+        justify-content: center;
+        gap: 80px;
+    }
+
+    .update > iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        outline-width: 5px;
+    }
+
+    .gallery {
+        padding: 40px 10px;
+        min-height: 700px;
+        height: auto;
+    }
+
+    .gallery > .main {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .gallery > .main > .main_photo {
+        width: 100%;
+        outline-width: 4px;
+    }
+
+    .gallery > .main > .more_photos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .gallery > .main > .more_photos > a > img {
+        max-width: 140px;
+    }
+
+    .fiction > p {
+        width: 95%;
+        font-size: 18px;
     }
 }
