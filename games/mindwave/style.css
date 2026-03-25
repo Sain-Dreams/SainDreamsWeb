@@ -49,7 +49,7 @@ section::before {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 550px;
+    height: 650px;
 }
 
 .hero-logo > img {
@@ -116,6 +116,12 @@ section::before {
 
 .stores-bar > .btn-store:hover img{
     filter: brightness(0.0);
+}
+
+.NiL {
+    margin: 30px;
+    color: white;
+    font-size: 18px;
 }
 
 .description {
