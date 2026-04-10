@@ -2,12 +2,12 @@
     "mk-ultra": {
         "platforms": {
             "Windows": {
-                "in_test": "1.2.1",
-                "release": "1.2.1"
+                "in_test": "1.2.2",
+                "release": "1.2.2"
             },
             "Linux": {
-                "in_test": "none",
-                "release": "1.2.1"
+                "in_test": "1.2.2",
+                "release": "1.2.2"
             }
         }
     }
