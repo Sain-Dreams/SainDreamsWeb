@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     gap: 15px;
 
-    background-color: #242424;
+    background-color: #000000;
 }
 
 body > .divider {
@@ -33,10 +33,10 @@ section::before {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
 
-    background-image: url(/assets/images/thethreshold/marketing/background.webp);
+    background-image: var(--background-img);
     background-size: cover;
     background-position: center;
-    filter: blur(10px) brightness(0.4);
+    filter: blur(var(--blur)) brightness(0.4);
     z-index: -1;
 }
 
@@ -46,10 +46,12 @@ section::before {
     align-items: center;
     justify-content: center;
     height: 650px;
+
+    gap: 60px;
 }
 
 .hero-logo > img {
-    width: 50%;
+    width: 60%;
 
     object-fit: cover;
     object-position: center;
@@ -115,7 +117,7 @@ section::before {
 }
 
 .NiL {
-    margin: 30px;
+    margin: 0px;
     color: white;
     font-size: 18px;
 }
@@ -125,7 +127,7 @@ section::before {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 800px;
+    height: 600px;
 }
 
 .description > div {
@@ -139,20 +141,13 @@ section::before {
     padding: 50px;
     border-radius: 30px;
 
-    font-size: 18px;
+    font-size: 20px;
 
     color: white;
-    outline: 3px solid white;
 }
 
 .description > div > p {
     text-transform: none;
-}
-
-.description > div > p > i,
-.description > div > p > b {
-    background-color: white;
-    color: black;
 }
 
 .update {
@@ -194,6 +189,7 @@ section::before {
 
 .gallery > .main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -209,7 +205,7 @@ section::before {
 
 .gallery > .main > .more_photos {
     display: flex;
-    flex-direction: column;
+    flex-direction:row;
 
     gap: 25px;
 }
