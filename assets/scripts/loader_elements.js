@@ -25,19 +25,23 @@ const langLinks = {
         "link_home": "/", 
         "link_about": "/#about",
         "link_mindwave": "/games/mindwave",
-        "link_lavaris": "/games/lavaris"
+        "link_lavaris": "/games/lavaris",
+        "link_thethreshold": "/games/thethreshold"
+
     },
     "pt-br": {
         "link_home": "/pt-br/",
         "link_about": "/pt-br/#about",
         "link_mindwave": "/pt-br/games/mindwave",
-        "link_lavaris": "/pt-br/games/lavaris"
+        "link_lavaris": "/pt-br/games/lavaris",
+        "link_thethreshold": "/pt-br/games/thethreshold"
     },
     "es": {
         "link_home": "/es/",
         "link_about": "/es/#about",
         "link_mindwave": "/es/games/mindwave",
-        "link_lavaris": "/es/games/lavaris"
+        "link_lavaris": "/es/games/lavaris",
+        "link_thethreshold": "/es/games/thethreshold"
     }
 }
 
