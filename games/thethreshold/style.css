@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    background-color: #000000;
+}
+
+body > .divider {
+    height: 1px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+section {
+    position: relative;
+    width: 100%;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+
+    background-image: var(--background-img);
+    background-size: cover;
+    background-position: center;
+    filter: blur(var(--blur)) brightness(0.4);
+    z-index: -1;
+}
+
+.hero-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 650px;
+
+    gap: 60px;
+}
+
+.hero-logo > img {
+    width: 60%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+#stores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+
+    gap: 20px;
+}
+
+#stores > .title{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.stores-bar {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+
+    border-radius: 15px;
+    padding: 15px 15px;
+    gap: 10px;
+
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.stores-bar > .btn-store {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 55px;
+    height: 55px;
+
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    background-color: transparent;
+
+    padding: 10px;
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+
+    transition: background-color 0.3s ease;
+}
+
+.stores-bar > .btn-store:hover {
+    background-color: white;
+    outline: 2px solid white;
+}
+
+.stores-bar > .btn-store img{
+    filter: brightness(0.5);
+}
+
+.stores-bar > .btn-store:hover img{
+    filter: brightness(0.0);
+}
+
+.NiL {
+    margin: 0px;
+    color: white;
+    font-size: 18px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+}
+
+.description > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+
+    width: 60%;
+    gap: 25px;
+    padding: 50px;
+    border-radius: 30px;
+
+    font-size: 20px;
+
+    color: white;
+}
+
+.description > div > p {
+    text-transform: none;
+}
+
+.update {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 80px;
+    gap: 80px;
+}
+
+.update > h1 {
+    color: white;
+    text-align: center;
+}
+
+.update > iframe {
+    border-radius: 15px;
+
+    outline: solid 10px white;
+    box-shadow: 0px 0px 25px white;
+}
+
+.update > a {
+    color: white;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 50px;
+    padding: 80px;
+
+    color: white;
+}
+
+.gallery > .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 35px;
+}
+
+.gallery > .main > .main_photo {
+    outline: solid 6px white;
+    box-shadow: 0px 0px 25px white;
+
+    border-radius: 10px;
+}
+
+.gallery > .main > .more_photos {
+    display: flex;
+    flex-direction:row;
+
+    gap: 25px;
+}
+
+.gallery > .main > .more_photos > a > img {
+    display: block;
+    line-height: 0;
+    max-width: 200px;
+    outline: solid 3px rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 0px 15px white;
+
+    filter: brightness(0.5);
+    border-radius: 5px;
+
+    transition: transform 0.3s ease, outline-color 0.3s ease, filter 0.3s ease;
+}
+
+.gallery > .main > .more_photos > a > img.active,
+.gallery > .main > .more_photos > a > img:hover {
+    transform: scale(1.10);
+    outline: solid 3px white;
+    filter: brightness(1.0);
+}
+
+.fiction {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to right, #353535, transparent, #353535);
+    padding: 15px 0px;
+}
+
+.fiction > p {
+    width: 80%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+@media (max-width: 780px) {
+    h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .hero-logo {
+        overflow: hidden;
+        min-height: 700px;
+        height: auto;
+
+        padding: 50px 0px;
+        gap: 50px;
+    }
+
+    .hero-logo > img {
+        width: 100%;
+        transform: scale(1.25);
+        object-fit: contain;
+    }
+    #stores > .title {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    #stores {
+        gap: 40px;
+    }
+
+    .stores-bar {
+        padding: 18px;
+    }
+
+    .stores-bar > .btn-store {
+        width: 75px;
+        height: 75px;
+
+        outline: 3px solid rgba(255, 255, 255, 0.5);
+    }
+
+
+    .description {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .description > div {
+        width: 100%;
+        padding: 25px;
+        font-size: 18px;
+        border-radius: 15px; 
+
+        text-align: center;
+    }
+
+    .update {
+        display: flex;
+        flex-direction: column;
+        min-height: 700px;
+        height: auto;
+        padding: 40px 15px;
+        justify-content: center;
+        gap: 80px;
+    }
+
+    .update > iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        outline-width: 5px;
+    }
+
+    .gallery {
+        padding: 40px 10px;
+        min-height: 700px;
+        height: auto;
+    }
+
+    .gallery > .main {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .gallery > .main > .main_photo {
+        width: 100%;
+        outline-width: 4px;
+    }
+
+    .gallery > .main > .more_photos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .gallery > .main > .more_photos > a > img {
+        max-width: 140px;
+    }
+
+    .fiction > p {
+        width: 95%;
+        font-size: 18px;
+    }
+}
