@@ -153,18 +153,81 @@
 
 .menu-toggle {
     display: none;
+
+    align-items: center;
     right: 0;
+    background-color: transparent;
+    border: none;
 }
 
-.menu {
+#navbar .menu-layer {
+    display: flex;
+    flex-direction: row;
     visibility: hidden;
-    background-color: black;
+
     height: 100%;
-    width: 70%;
+    width: 100%;
+
     position: fixed;
+
     left: 0;
     top: 0;
     z-index: 100;
+}
+
+#navbar .menu-layer > .quit{
+    background-color: black;
+}
+
+#navbar .menu {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+    align-items: center;
+
+    background-image: linear-gradient(135deg, rgb(20, 20, 20), rgb(105, 105, 105));
+
+}
+
+#navbar .menu > .mn-logo > a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+    color: white; 
+}
+
+#navbar .mn-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+}
+
+#navbar .mn-btn a,
+#navbar .mn-btn summary {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+
+    padding: 7px 10px;
+    border-radius: 12px;
+    gap: 10px;
+
+    list-style: none;
+    cursor: pointer;
+
+    font-weight: bold;
+    user-select: none;
+    text-decoration: none;
+
+    outline: 2px solid white;
+    background-color: transparent;
+    color: white;
+
+    transition: background-color 0.3s ease;
 }
 
 @media (max-width: 1024px) {
@@ -189,11 +252,13 @@
         display: none;
     }
 
-    .menu-toggle {
-        display: inline;
+    #navbar .menu-toggle {
+        display: flex;
+
+        align-items: center;
     }
 
-    .menu {
+    #navbar .menu {
         visibility: visible;
     }
 }
