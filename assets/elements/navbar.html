@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <body>
     <meta id="redirection" http-equiv="refresh" content="0; URL='/'" />
+    <button class="menu-toggle"><img src="/assets/icons/menu-outline.webp" alt="" width="60"></button>
+    
     <div class="logo"><a href="{{link_home}}"><img src="/assets/icons/sain_dreams.webp" alt="Sain Dreams Logo"  width="75px"><h1 translate="no">Sain&nbsp;Dreams</h1></a></div>
     <ul class="nav-links">
         <li class="links">
@@ -34,22 +36,19 @@
         </li>
         <li class="links"><a href="{{link_about}}">{{nav_about}}</a></li>
     </ul>
-    <button class="menu-toggle"><img src="/assets/icons/menu-outline.webp" alt="" width="60"></button>
-    <div class="menu-layer">
+    <aside class="menu-layer">
         <div class="menu">
             <div class="mn-logo"><a href="{{link_home}}"><img src="/assets/icons/sain_dreams.webp" alt="Sain Dreams Logo"  width="110px"><h1 translate="no">Sain&nbsp;Dreams</h1></a></div>
 
 
             <div class="mn-btns">
                 <li class="mn-btn">
-                    <details>
-                        <summary>{{nav_games}}</summary>
-                        <ul class="content">
-                            <li style="display: none;"><a href="{link_lavaris}" translate="no">Lavaris</a></li>
-                            <li><a href="{{link_mindwave}}" translate="no">Mindwave</a></li>
-                            <li><a href="{{link_thethreshold}}" translate="no">The Threshold</a></li>
-                        </ul>
-                    </details>
+                    <a>{{nav_games}}</a>
+                    <ul class="content">
+                        <li style="display: none;"><a href="{link_lavaris}" translate="no">Lavaris</a></li>
+                        <li><a href="{{link_mindwave}}" translate="no">Mindwave</a></li>
+                        <li><a href="{{link_thethreshold}}" translate="no">The Threshold</a></li>
+                    </ul>
                 </li>
                 <li class="mn-btn" style="display: none;">
                     <details>
@@ -70,9 +69,9 @@
                         </ul>
                     </details>
                 </li>
-                <li class="mn-btn"><a href="{{link_about}}">{{nav_about}}</a></li>
+                <li class="mn-btn"><a class="about-btn" href="{{link_about}}">{{nav_about}}</a></li>
             </div>
         </div>
-        <div class="quit"><button>aaaaaaaaa</button></div>
-    </div>
+        <button class="menu-quit"></button>
+    </aside>
 </body>

@@ -96,3 +96,32 @@ document.addEventListener("DOMContentLoaded", () => {
     loadElement("navbar","/assets/elements/navbar.html")
     loadElement("footerContainer","/assets/elements/footer.html")
 })
+
+document.addEventListener('click', (event) => {
+    const menuLayer = document.querySelector('.menu-layer');
+
+    if (event.target.closest('.menu-toggle')) {
+        menuLayer.classList.toggle('open');
+    }
+
+    if (event.target.closest('.menu-quit')) {
+        menuLayer.classList.remove('open')
+    }
+
+    if (event.target.closest('.about-btn')) {
+        menuLayer.classList.remove('open')
+    }
+    if (event.target.parentElement.closest('.mn-btn')) {
+        const contentBtn = event.target.parentElement
+        const content = contentBtn.querySelector('.content')
+
+        if (content.classList.contains('open')) {
+            content.classList.remove('open')
+        } else {
+            content.classList.toggle('open')
+        }
+
+
+    }
+    console.log(event.target.parentElement)
+})
