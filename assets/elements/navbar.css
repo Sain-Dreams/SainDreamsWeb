@@ -173,7 +173,7 @@
     top: 0;
     z-index: 100;
 
-    transform: translateX(0);
+    transform: translateX(-100%);
 
     transition: transform 0.3s ease-in-out;
 }
@@ -182,6 +182,13 @@
     transform: translateX(0);
 }
 
+#navbar .menu-layer > .menu .div-quit {
+    width: 100%;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: end;
+    padding-right: 15px;
+}
 
 #navbar .menu-layer > .menu-quit {
     width: 30%;
@@ -193,7 +200,7 @@
     transition: opacity 0.5s ease-in-out;
 }
 
-#navbar .menu-layer.open .menu-quit {
+#navbar .menu-layer.open > .menu-quit {
     opacity: 50%;
 }
 
@@ -206,7 +213,13 @@
     align-items: center;
 
     background-image: linear-gradient(135deg, rgb(20, 20, 20), rgb(105, 105, 105));
+}
 
+#navbar .menu-layer > .menu > .mn-logo {
+    width: 90%;
+    border-bottom: 3px solid;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
 }
 
 #navbar .menu > .mn-logo > a {
@@ -218,47 +231,85 @@
 }
 
 #navbar .mn-btns {
+    width: 100%;
     height: 70%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     gap: 20px;
     list-style: none;
 }
 
+#navbar .mn-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 #navbar .mn-btn > a {
     flex: 1;
-    display: flex;
-    align-items: center;
-    vertical-align: middle;
+    display: inline-block;
 
+    width: 90%;
     padding: 7px 10px;
-    border-radius: 12px;
     gap: 10px;
 
     list-style: none;
     cursor: pointer;
 
+    font-size: 20px;
     font-weight: bold;
     user-select: none;
     text-decoration: none;
 
+    border-radius: 15px;
     outline: 2px solid white;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.3);
     color: white;
 
     transition: background-color 0.3s ease;
 }
 
+#navbar .mn-btn:has(> .content.open) > a {
+    background-color: white;
+    color: black;
+}
+
 #navbar .mn-btn > .content {
     display: none;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+
+    width: 85%;
+
+    font-weight: bold;
+    font-size: 20px;
+    padding: 15px;
+    gap: 10px;
+    border-radius: 0px 0px 15px 15px;
+    border: 3px solid white;
+}
+
+#navbar .mn-btn > .content a {
+    color: white;
+    width: 100%;
+    user-select: none;
+    text-decoration: none;
+}
+
+#navbar .mn-btn > .content > li {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 5px;
+    border-radius: 10px;
 }
 
 #navbar .mn-btn > .content.open {
     display: flex;
-    flex-direction: column;
 }
-
 
 @media (max-width: 1024px) {
     #navbar .nav-links {
