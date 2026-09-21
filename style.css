@@ -47,6 +47,53 @@ body > .divider {
     z-index: -1;
 }
 
+#games {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+
+}
+
+#games > .aba {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 350px;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+#games > .aba::before {
+    content: "";
+    position: absolute;
+    margin: 10px;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+
+    background-image: var(--bg-image);
+    background-position: center;
+    filter: brightness(0.6) blur(5px);
+
+}
+
+#games > .aba a {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+#games > .aba img {
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+    background-image: linear-gradient(90deg, rgb(35,35,35), transparent);
+}
+
+
 #about {
     display: flex;
     margin: 0 auto;
