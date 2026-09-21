@@ -260,7 +260,7 @@ section::before {
 
     .hero-logo > img {
         width: 100%;
-        transform: scale(1.25);
+        transform: scale(0.85);
         object-fit: contain;
     }
     #stores > .title {

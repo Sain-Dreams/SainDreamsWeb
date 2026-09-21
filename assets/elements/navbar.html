@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <body>
     <meta id="redirection" http-equiv="refresh" content="0; URL='/'" />
+    <button class="menu-toggle"><img src="/assets/icons/menu-outline.webp" alt="" width="60"></button>
+    
     <div class="logo"><a href="{{link_home}}"><img src="/assets/icons/sain_dreams.webp" alt="Sain Dreams Logo"  width="75px"><h1 translate="no">Sain&nbsp;Dreams</h1></a></div>
     <ul class="nav-links">
         <li class="links">
@@ -34,4 +36,46 @@
         </li>
         <li class="links"><a href="{{link_about}}">{{nav_about}}</a></li>
     </ul>
+    <aside class="menu-layer">
+        <div class="menu">
+            <div class="div-quit"><a class="menu-quit">X</a></div>
+            <div class="mn-logo">
+                <a href="{{link_home}}">
+                    <img src="/assets/icons/sain_dreams.webp" alt="Sain Dreams Logo"  width="110px">
+                    <h1 translate="no">Sain&nbsp;Dreams</h1>
+                </a>
+            </div>
+            <div class="mn-btns">
+                <li class="mn-btn">
+                    <a>{{nav_games}}</a>
+                    <ul class="content">
+                        <li style="display: none;"><a href="{link_lavaris}" translate="no">Lavaris</a></li>
+                        <li><a href="{{link_mindwave}}" translate="no">Mindwave</a></li>
+                        <li><a href="{{link_thethreshold}}" translate="no">The Threshold</a></li>
+                    </ul>
+                </li>
+                <li class="mn-btn" style="display: none;">
+                    <details>
+                        <summary><img src="https://godotengine.org/assets/press/icon_monochrome_dark.png" width="25">{{nav_tools}}</summary>
+                        <ul class="content">
+                            <li><a href="" translate="no">DualSenseX Support</a></li>
+                            <li><a href="" translate="no">Game Jolt API</a></li>
+                            <li><a href="" translate="no">Game Level Tools</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li class="mn-btn" style="display: none;">
+                    <details>
+                        <summary>Apps</summary>
+                        <ul class="content">
+                            <li><a href="" translate="no">Game Hub</a></li>
+                            <li><a href="" translate="no">MyPC</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li class="mn-btn"><a class="about-btn" href="{{link_about}}">{{nav_about}}</a></li>
+            </div>
+        </div>
+        <button class="menu-quit"></button>
+    </aside>
 </body>
