@@ -47,6 +47,61 @@ body > .divider {
     z-index: -1;
 }
 
+#games {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+
+}
+
+#games > .aba {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 350px;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+#games > .aba::before {
+    content: "";
+    position: absolute;
+    margin: 10px;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+
+    background-image: var(--bg-image);
+    background-position: center;
+    filter: brightness(0.6) blur(5px);
+
+}
+
+#games > .aba > div {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+#games > .aba a {
+    width: 50%;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+#games > .aba img {
+    width: 50%;
+    height: 100%;
+    padding: 0px 30px;
+    object-fit: contain;
+    background-image: linear-gradient(var(--bg-deg), rgb(35,35,35), transparent);
+}
+
+
 #about {
     display: flex;
     margin: 0 auto;
@@ -96,6 +151,30 @@ body > .divider {
 
     .hero-logo img {
         width: 320px;
+    }
+
+    #games > .aba {
+        flex-direction: column;
+    }
+
+    #games > .aba img {
+        background-image: linear-gradient(180deg, rgb(35,35,35), transparent);
+        width: 100%;
+        height: 80%;
+    }
+
+    #games > .aba > div {
+        order: 1;
+    }
+
+    #games > .aba a {
+        width: 100%;
+        font-size: 0px;
+    }
+
+    #games > .aba a::after {
+        content: "More ->";
+        font-size: 30px;
     }
 
     #about > .text {
