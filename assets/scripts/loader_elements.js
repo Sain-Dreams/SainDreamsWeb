@@ -92,9 +92,18 @@ function loadElement(containerId, elementPath) {
     }
 }
 
+function initUmami() {
+    const UmamiScript = document.createElement('script');
+    UmamiScript.defer = true;
+    UmamiScript.src = "https://cloud.umami.is/script.js";
+    UmamiScript.setAttribute("data-website-id", "ce9c041d-298a-4579-8dac-764e1791c754");
+    document.head.appendChild(UmamiScript)
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     loadElement("navbar","/assets/elements/navbar.html")
     loadElement("footerContainer","/assets/elements/footer.html")
+    initUmami()
 })
 
 document.addEventListener('click', (event) => {
@@ -120,8 +129,6 @@ document.addEventListener('click', (event) => {
         } else {
             content.classList.toggle('open')
         }
-
-
     }
     console.log(event.target.parentElement)
 })
