@@ -89,8 +89,9 @@ body > .divider {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
-    text-decoration: none;
     color: white;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 7px;
 }
 
 #games > .aba img {
@@ -165,6 +166,7 @@ body > .divider {
 
     #games > .aba > div {
         order: 1;
+        width: 100%;
     }
 
     #games > .aba a {
@@ -173,8 +175,8 @@ body > .divider {
     }
 
     #games > .aba a::after {
-        content: "More ->";
-        font-size: 30px;
+        content: attr(data-text);
+        font-size: 25px;
     }
 
     #about > .text {
